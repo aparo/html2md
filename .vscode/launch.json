@@ -1,27 +1,216 @@
 {
-    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
-    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
-    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Debug unit-tests",
             "type": "lldb",
             "request": "launch",
-            "program": "./target/debug/deps/unit-c322eb3e597450f1",
-            "args": [ "test_escaping", "--nocapture" ],
-            "cwd": "${workspaceRoot}",
-            "sourceLanguages": ["rust"]
+            "name": "Debug unit tests in library 'html2md'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "html2md",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
         },
         {
-            "name": "Debug integration-tests",
             "type": "lldb",
             "request": "launch",
-            "program": "./target/debug/deps/integration-2be29df99b0a42dd",
-            "args": [ "test_strong_inside_link", "--nocapture" ],
-            "cwd": "${workspaceRoot}",
-            "sourceLanguages": ["rust"]
+            "name": "Debug executable 'html2md'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=html2md",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "html2md",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'html2md'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=html2md",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "html2md",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'iframes'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=iframes",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "iframes",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'unit'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=unit",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "unit",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'integration'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=integration",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "integration",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'images'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=images",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "images",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'styles'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=styles",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "styles",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'tables'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=tables",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "tables",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'quotes'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=quotes",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "quotes",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'lists'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=lists",
+                    "--package=html2md"
+                ],
+                "filter": {
+                    "name": "lists",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
