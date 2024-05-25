@@ -1,5 +1,5 @@
-use super::TagHandler;
 use super::StructuredPrinter;
+use super::TagHandler;
 
 use markup5ever_rcdom::Handle;
 
@@ -7,14 +7,13 @@ use markup5ever_rcdom::Handle;
 pub struct ContainerHandler;
 
 impl TagHandler for ContainerHandler {
+  fn handle(&mut self, _tag: &Handle, printer: &mut StructuredPrinter) {
+    printer.insert_newline();
+    printer.insert_newline();
+  }
 
-    fn handle(&mut self, _tag: &Handle, printer: &mut StructuredPrinter) {
-        printer.insert_newline();
-        printer.insert_newline();
-    }
-
-    fn after_handle(&mut self, printer: &mut StructuredPrinter) {
-        printer.insert_newline();
-        printer.insert_newline();
-    }
+  fn after_handle(&mut self, printer: &mut StructuredPrinter) {
+    printer.insert_newline();
+    printer.insert_newline();
+  }
 }
