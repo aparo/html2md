@@ -59,7 +59,7 @@ lazy_static! {
 }
 
 /// Custom variant of main function. Allows to pass custom tag<->tag factory pairs
-/// in order to register custom tag hadler for tags you want.
+/// in order to register custom tag handler for tags you want.
 ///
 /// You can also override standard tag handlers this way
 /// # Arguments
