@@ -16,7 +16,7 @@ impl TagHandler for DummyHandler {
 
 /// Handler that completely copies tag to printer as HTML with all descendants
 #[derive(Default)]
-pub(super) struct IdentityHandler;
+pub struct IdentityHandler;
 
 impl TagHandler for IdentityHandler {
   fn handle(&mut self, tag: &Handle, printer: &mut StructuredPrinter) {

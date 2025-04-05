@@ -1,6 +1,6 @@
 [package]
 name = "html2md"
-version = "0.2.14"
+version = "0.2.15"
 edition = "2018"
 authors = ["Oleg `Kanedias` Chernovskiy <kanedias@house-of-maker.online>"]
 
@@ -24,8 +24,8 @@ crate-type = ["rlib", "dylib", "staticlib"]
 lazy_static = "1.5.0"
 html5ever = "0.27.0"
 markup5ever_rcdom = "0.3.0"
-regex = "1.10.4"
-percent-encoding = "2.3.1"
+regex = "1.11.1"
+percent-encoding = "2.1.0"
 
 [dev-dependencies]
 spectral = "0.6.0"
